@@ -31,9 +31,3 @@ let moveFunction = () => {
   currentIteration.push(randomMovesArr[counter])
   currentIteration[counter]
 }
-
-
-computer Move {
-  iter
-
-}
