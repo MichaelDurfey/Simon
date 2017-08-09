@@ -1,0 +1,259 @@
+
+@import url('https://fonts.googleapis.com/css?family=Orbitron:900, 700, 400');
+
+@import url('https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:400,600');
+
+html, body {
+  height: 100%;
+  background: grey;
+}
+
+.container-fluid {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.innerCircle {
+  width: 250px;
+  height: 250px;
+  z-index: 1;
+  background: white;
+  border-radius: 50%;
+  margin: auto;
+}
+
+.simonText {
+  position: relative;
+  top: 50px;  
+  font-size: 60px;
+  font-weight: 700;
+  font-variant: small-caps;
+  left: 39px;
+  margin: auto;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.row {
+  position: relative;
+}
+
+.countDiv {
+  height:80px;
+  width: 57px;
+  position: absolute;
+  text-align: center;
+  top: 50px;
+  left:26px;
+}
+
+.countDisplay {
+  width: 50px;
+  height: 29px;
+  position: relative;
+  background: #32050C;
+  border-radius: 8px;
+  border: solid black;
+  font-family: 'Orbitron', sans-serif;
+  color: #DC0D29;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.count {
+  padding: auto;
+  font-weight: 400;
+  font-size: 25px;
+  height: 20px;
+}
+
+.startDiv {
+  height:80px;
+  width: 57px;
+  position: absolute;
+  text-align: center;
+  top: 50px;
+  left:100px;
+
+}
+
+.startButton {
+  width: 18px;
+  height: 18px;
+  top: 6px;
+  position: relative;
+  display: inline-block;
+  border-radius: 50%;
+  border: solid grey;
+  background: #FC0102;
+  margin-bottom: 5px;
+}
+
+.strictDiv {
+  height:80px;
+  width: 57px;
+  position: absolute;
+  text-align: center;
+  top: 50px;
+  left:175px;
+}
+
+.strictLight{
+  width: 9px;
+  height: 9px;
+  background-color: #32050C;
+    border: solid grey;
+  border-radius: 50%;
+  border-width: 1px;
+  position: inherit;
+  left: 22px;
+  top: -7px;
+}
+
+.strictButton {
+  width: 18px;
+  height: 18px;
+  top: 7px;
+  position: relative;
+  display: inline-block;
+  border-radius: 50%;
+  border: solid grey;
+  background: #FFFF00;
+  margin-bottom: 5px;
+}
+
+.button-text {
+  margin-top: 0px;
+  font-family: 'Saira Extra Condensed', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.onButton {
+  display: flex;
+  align-items: center;  
+  justify-content: space-around;
+  flex-flow: row;
+  position:relative; 
+  top: 120px;
+  left: 40px;
+  width: 180px;
+  height: 45px;
+  font-size: 25px;
+  font-weight: 900;
+  font-variant: small-caps;
+  font-family: 'Saira Extra Condensed', sans-serif;
+}
+
+.switch {
+  position: absolute;
+  display: inline-block;
+  width: 60px;
+  height: 26px;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000;
+  border-radius: 5px;
+  border: solid grey;
+  border-width: 1px;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 20px;
+  left: 4px;
+  bottom: 1.5px;
+  background-color: white;
+  border: solid grey;
+  border-width: 1px;
+  border-radius: 6px;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+
+/*-----------CIRCLE ELEMENTS*-----------------*/
+
+.mainCircle {
+  margin: auto;
+  height: 550px;
+  width: 550px;
+  border-radius: 50%;
+  background-color: #333333;
+  display: flex;
+  position: relative;
+  overflow:hidden;
+  border: solid #333333 28px;
+}
+
+.innerCircle {
+  width: 250px;
+  height: 250px;
+  z-index: 1;
+  background: white;
+  border-radius: 50%;
+  margin: auto;
+  border: solid #333333 12px;
+}
+
+.redCircle {
+  height: 280px;
+  width: 300px;
+  z-index: 1;
+  background-color: #9F0F17;
+  position: absolute;
+  left:290px;
+}
+
+.greenCircle {
+  height: 280px;
+  width: 265px;
+  z-index: 1;
+  background-color: #00A74A;
+  position: absolute;
+}
+
+.yellowCircle {
+  height: 300px;
+  width: 265px;
+  top: 300px;
+  z-index: 1;
+  background-color: #CCA707;
+  position: absolute;
+}
+
+.blueCircle {
+  height: 300px;
+  width: 265px;
+  top: 300px;
+  left: 290px;
+  z-index: 1;
+  background-color: #094A8F;
+  position: absolute;
+}
