@@ -109,7 +109,7 @@ let start = () => {
 
 
 let buttonPress = (id) => {
-  idletime = 0;
+  idleTime = 0;
   if (playerTurn == true){
     playerMoves.push(id);
     if (randomMovesArr[playerCounter] != playerMoves[playerCounter]){
