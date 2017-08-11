@@ -91,6 +91,10 @@ html, body {
   margin-bottom: 5px;
 }
 
+.startButton:hover {
+  cursor: pointer;
+}
+
 .strictDiv {
   height:80px;
   width: 57px;
@@ -110,6 +114,10 @@ html, body {
   position: inherit;
   left: 22px;
   top: -7px;
+}
+
+.active {
+  background-color: #FC0102!important;
 }
 
 .strictButton {
@@ -231,6 +239,22 @@ input:checked + .slider:before {
   left:290px;
 }
 
+.red {
+  background-color: #e0151f!important;
+}
+
+.green {
+  background-color: #00f56e!important;
+}
+
+.blue {
+  background-color: #0f77e6!important;
+}
+
+.yellow {
+  background-color: #f1c709!important;
+}
+
 .greenCircle {
   height: 280px;
   width: 265px;
@@ -256,4 +280,15 @@ input:checked + .slider:before {
   z-index: 1;
   background-color: #094A8F;
   position: absolute;
+}
+
+.winText{
+  font-size: 40px;
+  font-family: times;
+  color: white;
+  z-index:1;
+  position: absolute;
+  top: 160px;
+  left: 120px;
+  
 }

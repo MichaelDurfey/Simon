@@ -1,67 +1,53 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Simon</title>
-  <link rel="stylesheet" type="text/css" href="/styles.css">
-</head>
-<body>
-  <div class = "container-fluid">
-
-    <div class = "mainCircle">
-      <div class = "greenCircle" id = "1">
-
-      </div>
-      <div class = "redCircle" id = "2">
-
-
-      </div>   
-      <div class = "yellowCircle" id = "3">
-
-      </div>
-
-      <div class = "blueCircle" id = "4">
-
-      </div>
-
-
-      <div class = "innerCircle">
-        <h1 class = "simonText">Simon</h1>
-
-        <div class = "row">
-          <div class = "countDiv">
-            <div class = "countDisplay">
-              <h1 class = "count">--</h1>
-            </div>
-            <p class = "button-text" style = "margin-top: -3px">Count</p>
+<div class = "container-fluid">
+  
+  <div class = "mainCircle">
+    <div class = "greenCircle button" id = "0" onClick = "buttonPress(this.id)">
+      
+    </div>
+    <div class = "redCircle button" id = "1" onClick = "buttonPress(this.id)">
+      
+      
+    </div>   
+    <div class = "yellowCircle button" id = "2" onClick = "buttonPress(this.id)">
+      
+    </div>
+    
+    <div class = "blueCircle button" id = "3" onClick = "buttonPress(this.id)">
+      
+    </div>
+    
+    
+    <div class = "innerCircle">
+      <h1 class = "simonText">Simon</h1>
+      
+      <div class = "row">
+        <div class = "countDiv">
+          <div class = "countDisplay">
+            <h1 class = "count">--</h1>
           </div>
-          <div class = "startDiv">
-            <a class = "startButton" href="start()">          
-            </a>
-            <h1 class ="button-text">Start<h1>
+          <p class = "button-text" style = "margin-top: -3px">Count</p>
+        </div>
+        <div class = "startDiv">
+          <a class = "startButton" onClick="start()">          
+          </a>
+          <h1 class ="button-text">Start<h1>
+        </div>
+        <div class = "strictDiv">
+          <div class = "strictLight" id = "strictLight"></div>
+            <a class = "strictButton">          
+          </a>
+          <h1 class ="button-text">Strict<h1>
+        </div>    
+          <div class = "onButton">
+            <p class = "text onText">Off</p>
+            <label class="switch">
+              <input type="checkbox" style = "position: relative; top: -5px;" id = "checkbox">
+              <span class="slider"></span>
+            </label>
+            <p class = " text offText">On</p>
           </div>
-            <div class = "strictDiv">
-              <div class = "strictLight" id = "strictLight"></div>
-              <a class = "strictButton" href="start()">          
-              </a>
-              <h1 class ="button-text">Strict<h1>
-            </div>    
-            <div class = "onButton">
-              <p class = "text onText">Off</p>
-              <label class="switch">
-                <input type="checkbox" style = "position: relative; top: -5px;" id = "checkbox">
-                <span class="slider"></span>
-              </label>
-              <p class = " text offText">On</p>
-            </div>
-          </div><!-- END ROW -->
-
-          </div>    
-      </div><!--mainCircle-->  
-  </div><!--container-fluid -->
-<script type="text/javascript" src ="/jquery/dist/jquery.min.js"></script>
-<script type="text/javascript" src ="/index.js"></script>
-</body>
-</html>
+      </div><!-- END ROW -->
+      
+    </div>    
+  </div><!--mainCircle-->  
+</div><!--container-fluid--->
