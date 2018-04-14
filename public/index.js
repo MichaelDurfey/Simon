@@ -1,4 +1,4 @@
-let checkBox = document.getElementById("checkbox");
+const checkBox = document.getElementById("checkbox");
 let randomMovesArr = [];
 let currentIteration = [];
 let playerMoves = [];
@@ -12,12 +12,12 @@ let idleTime = 0;
 let idleInterval;
 let pushed;
 
-let greenNoise = new Audio('https://s3.amazonaws.com/freecodecamp/simonSound2.mp3');
-let redNoise = new Audio('https://s3.amazonaws.com/freecodecamp/simonSound1.mp3');
-let yellowNoise = new Audio('https://s3.amazonaws.com/freecodecamp/simonSound3.mp3');
-let blueNoise = new Audio('https://s3.amazonaws.com/freecodecamp/simonSound4.mp3');
-let errorSound = new Audio('https://freesound.org/data/previews/142/142608_1840739-lq.mp3');
-let noises = [greenNoise, redNoise, yellowNoise, blueNoise];
+const greenNoise = new Audio('https://s3.amazonaws.com/freecodecamp/simonSound2.mp3');
+const redNoise = new Audio('https://s3.amazonaws.com/freecodecamp/simonSound1.mp3');
+const yellowNoise = new Audio('https://s3.amazonaws.com/freecodecamp/simonSound3.mp3');
+const blueNoise = new Audio('https://s3.amazonaws.com/freecodecamp/simonSound4.mp3');
+const errorSound = new Audio('https://freesound.org/data/previews/142/142608_1840739-lq.mp3');
+const noises = [greenNoise, redNoise, yellowNoise, blueNoise];
 
 $('.strictButton').on('click', () => {
   $('#strictLight').toggleClass('active');
@@ -26,22 +26,20 @@ $('.strictButton').on('click', () => {
 
 $("#checkbox").on("click", () => {     
   checkBox.classList.toggle("checked")
-  console.log("clicked");
   if(!$("#checkbox").hasClass("checked")) {reset();}
 });
 
-let lightenedColorsArr = ['green', 'red', 'yellow', 'blue'];
+const lightenedColorsArr = ['green', 'red', 'yellow', 'blue'];
 
-let winnerAction = () => {
-  $('.mainCircle').html(
-    `
-<div class = "winText">
-<h1 >You win!</h1>
-</div> 
-`                      )
+const winnerAction = () => {
+  $('.mainCircle').html(`
+  <div class = "winText">
+  <h1 >You win!</h1>
+  </div> 
+`)
 }
 
-let reset = () => {
+const reset = () => {
   window.clearInterval(move);
   window.clearInterval(idleInterval)
   randomMovesArr = [];
@@ -54,7 +52,7 @@ let reset = () => {
   $('.count').text(`--`)
 }
 
-let moveFunction = () => {
+const moveFunction = () => {
   counter = 0;
   window.clearInterval(idleInterval)
   if (currentIteration.length <= 9) {
@@ -95,20 +93,19 @@ let moveFunction = () => {
   }
 } // MOVE FUNCTION
 
-let start = () => {
+const start = () => {
   if($("#checkbox").hasClass("checked")) {
     idleTime = 0;
     while(randomMovesArr.length < 21) {
       randomMovesArr.push(Math.floor(Math.random() * 4));
     }
     currentIteration.push(randomMovesArr[0])
-    console.log(randomMovesArr)
     moveFunction();
   }
 };
 
 
-let buttonPress = (id) => {
+const buttonPress = (id) => {
   idleTime = 0;
   if (playerTurn == true){
     playerMoves.push(id);
@@ -172,7 +169,7 @@ let buttonPress = (id) => {
 //----BUTTONPRESSES END ---//
 let maxTime;
 
-let playerTimeConstraint = () => {
+const playerTimeConstraint = () => {
   idleInterval = window.setInterval( () => {
       idleTime += 1;
       if (currentIteration.length <= 9) {
